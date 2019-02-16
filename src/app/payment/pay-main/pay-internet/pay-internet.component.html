@@ -1,0 +1,106 @@
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4>
+                    Сформируйте платежку и загрузите ее в свой банк для подписи
+                </h4>
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-md-3">
+                <p>ИНН получателя</p>
+            </div>
+            <div class="col-md-5">
+                <input class="form-control" 
+                    [(ngModel)]="currentInternetPay.inn"
+                    placeholder="ИНН или название получателя"
+                    pattern="\d{9}|\d{11}"
+                    (change)="updateButtonDisabled()">
+                
+                <span class="form__error">ИНН состоит из 9 или 11 цифр</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <p>БИК</p>
+            </div>
+            <div class="col-md-5">
+                <input class="form-control" 
+                [(ngModel)]="currentInternetPay.bik"
+                placeholder="БИК"
+                pattern="\d{9}"
+                (change)="updateButtonDisabled()">
+
+                <span class="form__error">БИК состоит из 9 цифр</span>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-3">
+                    <p>Номер счета</p>
+                </div>
+                <div class="col-md-5">
+                    <input class="form-control" 
+                        [(ngModel)]="currentInternetPay.accountNumber"
+                        placeholder="Номер счета"
+                        pattern="\d{20}"
+                        (change)="updateButtonDisabled()">
+                    
+                    <span class="form__error">Номер счета состоит из 20 цифр</span>
+                </div>
+            </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <p>За что </p>
+            </div>
+            <div class="col-md-5">
+                <input class="form-control" [(ngModel)]="currentInternetPay.nds"
+                    disabled
+                    placeholder="Выбирите НДС"
+                    (change)="updateButtonDisabled()">
+                <button type="button" class="btn btn-link" 
+                (click)="onSelect('НДС 18%')">
+                    НДС 18%
+                </button> 
+                <button type="button" class="btn btn-link" 
+                (click)="onSelect('НДС 10%')">
+                    НДС 10%
+                </button>
+                <button type="button" class="btn btn-link" 
+                (click)="onSelect('Без НДС')">
+                    Без НДС
+                </button> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <p>Сколько </p>
+            </div>
+            <div class="col-md-5">
+                <input type="number" 
+                    [(ngModel)]="currentInternetPay.price"
+                    class="form-control" 
+                    placeholder="Сколько"
+                    min="1000"
+                    max="75000"
+                    (change)="updateButtonDisabled()">
+                <span class="form__error">От 1000 до 75000</span>
+            </div>
+        </div>
+    </div>
+    <div class="payment-button">
+        <button  [disabled] = "a" type="button" class="btn btn-info" (click)="submitForm()">
+            Получить файл для интернет-банка
+        </button>
+    </div>
+    <div class="clear-button">
+        <button type="button" class="btn btn-link" (click)="clearForm()">
+            Очистить форму
+        </button>
+    </div> 
+</body>

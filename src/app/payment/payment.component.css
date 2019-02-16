@@ -1,0 +1,13 @@
+
+button {
+    font-size: 200%;
+    font-weight: 550;
+    margin: 20px;
+    color: blue;
+    background-color: white;
+    border: 0px;
+}
+
+button:disabled {
+    color: black;
+}

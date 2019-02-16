@@ -1,0 +1,74 @@
+body {
+    width: 80%;
+    margin: 30px;
+}
+
+.img-container {
+    background-size: cover;
+    overflow: hidden;
+    text-align: center;
+}
+.img-container img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.credit-card-div {
+    width: 80%;
+    min-width: 270px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.credit-card-div span {
+    padding-top:10px;
+}
+.credit-card-div img {
+    padding-top:30px;
+}
+.credit-card-div .small-font {
+    font-size:9px;
+}
+.credit-card-div .pad-adjust {
+    padding-top:10px;
+}
+p {
+    font-weight: 550;
+}
+
+.credit-card-div input {
+    background:#fafafa;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:12px;
+    color:#3a3a3a;
+}
+.credit-card-div input:focus:not([type=submit]) {
+    outline: none;
+    border-bottom: 1px solid #fb8c00;
+}
+
+.form__error {
+    color: red;
+    text-align: left;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+input:invalid:not(:placeholder-shown) + .form__error {
+    display: block;
+}
+
+#row1, #row2, #row3 {
+    padding: 10px;
+}

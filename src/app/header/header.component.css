@@ -1,0 +1,34 @@
+
+  .di {
+    color: maroon;
+    font-weight: 600;
+    padding: 10px;
+  }
+  .ip {
+    text-align: center;
+    font-size: 30px;
+  }
+  .contact {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .main {
+    width: 90%;
+  }
+  span {
+    padding-left: 10px;
+    padding-right: 10px;
+  }  
+  .info, .rekviz {
+    padding: 20px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      height: 0px;
+    }
+  }

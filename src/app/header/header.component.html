@@ -1,0 +1,42 @@
+<body>
+  <div class="row vertical-align" id="main">
+    <div class="col-md-9">
+      <h3 class="ip">
+        Индивидуальный предприниматель 
+        <div class="di"> Арапова Диана Владимировна </div>
+      </h3>
+
+      <div class="contact">
+        <span> 
+          +79321298921
+        </span>
+        <span> 
+          <a href="https://vk.com/id53153566" target="_blank"> www.arapova.com </a> 
+        </span>
+        <span> 
+            <a href="mailto:diiana_arapova@mail.ru?subject=WEB and DHTML">
+              diiana_arapova@mail.ru
+            </a>
+        </span> 
+      </div>
+      
+      <div class="info">
+          <button type="button" class="btn btn-info" (click)="onSelectInfo()">Информация о компании</button>
+          <app-header-info *ngIf="infoOn === true"> </app-header-info>
+      </div>
+
+      <div class="rekviz">
+          <button type="button" class="btn btn-info" (click)="onSelectRequisite()">Показать реквизиты</button>
+          <app-header-requisite *ngIf="requisiteOn == true"> </app-header-requisite>
+        </div>
+      
+
+    </div>
+    <div class="col-md-3">
+      <div class="imgg">
+        <img src="https://image.freepik.com/free-vector/no-translate-detected_33070-3321.jpg" 
+           alt="Вы не поверите, но это Пингвинчик"/>
+      </div>
+    </div>
+  </div>
+</body>

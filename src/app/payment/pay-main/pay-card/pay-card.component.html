@@ -1,0 +1,148 @@
+<body>
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-6 col-sm-offset-1 col-xs-offset-1 col-md-offset-1">
+          <div class="credit-card-div">
+            <div class="panel panel-default" >
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" 
+                        class="form-control" 
+                        pattern="\d{16}"
+                        [(ngModel)]="cardPay.cardNumber"
+                        placeholder="Номер карты" 
+                        (change)="updateButtonDisabled()"/>
+                    <span class="form__error">
+                        Номер карты содержит ровно 16 цифр
+                    </span>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                    <span class="help-block text-muted small-font"> Месяц </span>
+                    <input type="text" 
+                        class="form-control"
+                        pattern="\d{2}"
+                        [(ngModel)]="cardPay.mm" 
+                        placeholder="MM" 
+                        (change)="updateButtonDisabled()"/>
+
+                    <span class="form__error">
+                        2 цифры
+                    </span>
+                  </div>
+
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                        <span class="help-block text-muted small-font"> Год </span>
+                        <input type="text" 
+                            class="form-control"
+                            [(ngModel)]="cardPay.gg" 
+                            pattern="\d{2}"
+                            placeholder="YY" 
+                            (change)="updateButtonDisabled()"/>
+                        <span class="form__error">
+                            2 цифры
+                        </span>
+                      </div>
+                  
+                  
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                    <span class="help-block text-muted small-font" > CCV</span>
+                    <input type="text" 
+                        class="form-control"
+                        [(ngModel)]="cardPay.cvc" 
+                        pattern="\d{3}"
+                        placeholder="CCV" 
+                        (change)="updateButtonDisabled()"/>
+                    <span class="form__error">
+                        3 цифры
+                    </span>
+                  </div>
+                  
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                        <div class="img-container">
+                            <img src="http://bootstraptema.ru/snippets/form/2016/form-card/card.png" class="img-rounded" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-12 pad-adjust">
+                    <input type="text" 
+                        class="form-control" 
+                        [(ngModel)]="cardPay.fio"
+                        placeholder="Фамилия Имя"
+                        pattern="^\S+ \S+$" 
+                        (change)="updateButtonDisabled()"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div> 
+
+      <div class="col-md-5">
+          <div class="row"  id="row3">
+              <div class="col-md-4">
+                  <p>Сум&shy;ма</p>
+              </div>
+              <div class="col-md-8">
+                  <input class="form-control" 
+                    [(ngModel)]="cardPay.sum"
+                    (change)="updateButtonDisabled()"
+                    type="number" 
+                    placeholder="Сумма от 1000 до 75000" 
+                    min=1000
+                    max=75000/>
+                  
+                  <span class="form__error">
+                    Сумма от 1000 до 75000
+                  </span>
+              </div>
+          </div>
+      
+
+          <div class="row"  id="row2">
+              <div class="col-md-4">
+                  <p>Ком&shy;мен&shy;та&shy;рий</p>
+              </div>
+              <div class="col-md-8">
+                  <input class="form-control" 
+                      [(ngModel)]="cardPay.comment"
+                      (change)="updateButtonDisabled()"
+                      type="text"
+                      placeholder="До 150 символов"
+                      maxlength="150">
+                  
+              </div>
+          </div>
+
+      <div class="row" id="row1">
+          <div class="col-md-4">
+              <p>Элект&shy;рон&shy;ная поч&shy;та </p>
+          </div>
+          <div class="col-md-8">
+              <input 
+                  type="email" 
+                  [(ngModel)]="cardPay.email"
+                  (change)="updateButtonDisabled()"
+                  class="form-control" 
+                  placeholder="Для квитанций об оплате"
+                  pattern="^\S+@\S+\.\S+$">
+              <span class="form__error">Это поле должно содержать телефон в формате diiana@u.ru</span>
+          </div>
+      </div>
+
+      <div class="payment-button">
+          <button type="button" class="btn btn-info" [disabled]="a" (click)="submitForm()">
+              Заплатить
+          </button>
+          <button type="button" class="btn btn-link" (click)="clearForm()">
+            Очистить форму
+        </button>
+      </div>
+    </div>
+    </div>
+</body>
+

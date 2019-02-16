@@ -1,0 +1,22 @@
+body {
+  width: 90%;
+}
+table{
+    margin: 40px 0 0 0;
+    text-align: left;
+    border-collapse: separate;
+    border: 1px solid #ddd;
+    border-spacing: 10px;
+    border-radius: 3px;
+    background: #fdfdfd;
+    width: auto;
+  }
+  td,th{
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  th{
+    background: #E4E4E4;
+  }

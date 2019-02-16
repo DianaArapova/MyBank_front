@@ -1,0 +1,16 @@
+<div>
+  <button type="button" 
+    [disabled]="isPay"
+    (click)="onSelect('pay')">
+      Заплатить
+  </button>  
+  <button type="button" 
+    [disabled]="!isPay"
+    (click)="onSelect('payment')">
+      Запросить платеж
+  </button>
+</div>
+  
+<app-pay-main *ngIf="isPay"> </app-pay-main>
+<app-payment-main *ngIf="!isPay"> </app-payment-main>
+

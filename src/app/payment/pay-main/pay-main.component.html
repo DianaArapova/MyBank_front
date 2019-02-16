@@ -1,0 +1,11 @@
+<div>
+<button type="button" [disabled]="isCard" (click)="onSelect('card')">
+    С карты любого банка
+</button>  
+<button type="button" [disabled]="!isCard" (click)="onSelect('internet')">
+    Из своего интернет-банка
+</button>
+</div>  
+
+<app-pay-card *ngIf="isCard"></app-pay-card>
+<app-pay-internet *ngIf="!isCard"> </app-pay-internet>

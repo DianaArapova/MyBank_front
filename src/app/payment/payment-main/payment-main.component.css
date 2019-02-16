@@ -1,0 +1,57 @@
+body {
+    width: 80%;
+}
+
+h5 {
+    padding-left: 5%;
+    font-weight: 550;
+}
+
+.form__error {
+    color: red;
+    text-align: left;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+input:invalid:not(:placeholder-shown) + .form__error {
+    display: block;
+}
+
+p {
+    color: grey;
+    font-weight: 550;
+}
+
+.personal {
+    color: blue;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.row {
+    padding: 15px;
+}
+
+.payment-button {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.clear-button {
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+.btn-link {
+    font-weight: 600;
+}
