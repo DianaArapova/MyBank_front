@@ -10,26 +10,26 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 **Header of application**
 
-![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screen1.png)
+![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screens/screen1.png)
 
 **You can pay for the service from the card of any Bank**
 
-![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screen2.png)
+![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screens/screen2.png)
 
 **You can pay for the service from my Internet Bank. All fields you fill in are validated**
 
-![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screen3.png)
+![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screens/screen3.png)
 
 **If you fill in the field incorrectly, you will see a hint on how to fill it correctly.**
 
-![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screen5.png)
+![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screens/screen5.png)
 
 **You can download payment receipt.**
 
-![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screen4.png)
+![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screens/screen4.png)
 
 **Information about me in my application**
 
-![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screen6.png)
+![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screens/screen6.png)
 
 ©DianaArapova, 2018
