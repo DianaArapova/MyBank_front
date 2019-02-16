@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Single page application
 
-**Header of application
+**Header of application**
 
 ![Image alt](https://github.com/DianaArapova/MyBank_front/blob/master/screen1.png)
 
